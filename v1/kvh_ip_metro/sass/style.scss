@@ -16,10 +16,10 @@
 */
 
 @import "../../core/scss/bootstrap";
-@import "../../../node_modules/font-awesome/scss/font-awesome";
-@import "includes/select2";
-@import "../../../node_modules/dropzone/src/dropzone";
 @import "../../core/scss/bootstrap-datepicker";
+@import "../../../node_modules/font-awesome/scss/font-awesome";
+@import "../../../node_modules/dropzone/dist/dropzone";
+@import "../../../node_modules/select2/src/scss/core";
 
 /*
 |   =========================================================
@@ -45,3 +45,10 @@
 .dropdown-menu {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
 }
+/*
+|   =========================================================
+|   Custom styles
+|   =========================================================
+*/
+
+@import "custom_styles";
