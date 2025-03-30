@@ -1,6 +1,6 @@
 # Development Information for InvoicePlane v1 Themes
 
-You want to develop a new theme for InvoicePlane? Awesome! This guide will help you to quickly create your own theme and publish it in the InvoicePlane Theme repository. 
+You want to develop a new theme for InvoicePlane? Awesome! This guide will help you to quickly create your own theme and publish it in the InvoicePlane Theme repository.
 
 ### Theme concept introduction
 
@@ -16,10 +16,10 @@ All themes use the same structure. First, the variables are imported. They are u
 After that all dependencies are imported. Bootstrap is imported by the core to make sure only needed components are loaded.
 
     @import "../../core/scss/bootstrap";
-    @import "../../../node_modules/font-awesome/scss/font-awesome";
-    @import "includes/select2";
-    @import "../../../node_modules/dropzone/src/dropzone";
     @import "../../core/scss/bootstrap-datepicker";
+    @import "../../../node_modules/font-awesome/scss/font-awesome";
+    @import "../../../node_modules/dropzone/dist/dropzone";
+    @import "../../../node_modules/select2/src/scss/core";
 
 Last but no least the InvoicePlane core styles are loaded.
 
@@ -36,7 +36,7 @@ If you think the core should be changed, join the development chat or create a n
 
 To build your own theme you need to fulfill the following requirements:
 
-* Have Node.js and npm installed on your machine  
+* Have Node.js and npm installed on your machine
     We do recommend using the latest stable version of Node.js and npm.
 * Have `grunt-cli` installed globally for npm
 
@@ -54,14 +54,13 @@ A theme consists of many different files. All files are explained in this chapte
     │   ├── reports.scss
     │   ├── styles.scss
     │   ├── templates.scss
-    │   └── welcome.scss
     └── theme_indentifier.theme
 
 #### theme_indentifier.theme
 The `theme_indentifier.theme` file is the main file of your theme and absolutely needed for your theme to be accepted in the theme repository and to be selectable in the InvoicePlane settings. The file consists of various information about the theme:
 
 | Setting           | Description                                               | Example Value                         |
-| ----------------- | --------------------------------------------------------- | ------------------------------------- | 
+| ----------------- | --------------------------------------------------------- | ------------------------------------- |
 | TITLE             | The title that will show up in the InvoicePlane settings  | `InvoicePlane Blue`                   |
 | DESCRIPTION       | Short description about the theme                         | `A more colorful InvoicePlane theme.` |
 | VERSION           | The version of your theme, should use semver              | `InvoicePlane Blue`                   |
@@ -100,7 +99,8 @@ Contains the styles for the InvoicePlane application. As mentioned above: only a
 Contains the styles that are used for PDF templates.
 
 #### welcome.scss
-A smaller version of styles.scss that is used for the welcome screen and the setup.
+This is a smaller version of styles.scss that is used for the welcome screen and the setup
+> Note: InvoicePlane use only the default `InvoicePlane` theme when show setup ou welcome page. So there's no need to import/create it in your theme.
 
 #### `css` directory
 
@@ -130,9 +130,9 @@ You may copy an existing theme (except the `core` folder) and modify it to match
 
 Grunt is the task runner used for the theme compilation. There are two tasks available:
 
-* `grunt dev`  
+* `grunt dev`
     This command is used to develop a theme. It will automatically run an initial compilation and then start watching the theme files. If you change a theme file Grunt will automatically recompile the theme so you can continue working without interruptions. To cancel the watch process, use `ctrl` + `c`. The development command will not compress any CSS files to make debugging easier. Source maps are generated too.
-* `grunt build`  
+* `grunt build`
     The grunt build command is needed to prepare your theme styles for release. The command will compile all styles and compress them to save space. It will also delete any source maps as they are usually not needed in production environments.
 
 #### Publishing your theme
@@ -145,6 +145,8 @@ After adding your theme to the repository, you may also promote it in the Invoic
 
 ### Questions or need help?
 
-[![Community Forums](https://img.shields.io/badge/Help%3A-Community%20Forums-429ae1.svg)](https://community.invoiceplane.com/)  
-[![Issue Tracker](https://img.shields.io/badge/Development%3A-Issue%20Tracker-429ae1.svg)](https://development.invoiceplane.com/)  
-[![Slack Chat](https://img.shields.io/badge/Development%3A-Slack%20Chat-429ae1.svg)](https://invoiceplane-slack.herokuapp.com/)  
+[![Community Forums](https://img.shields.io/badge/Help%3A-Community%20Forums-429ae1.svg)](https://community.invoiceplane.com/)
+[![Issue Tracker](https://img.shields.io/badge/Development%3A-Issue%20Tracker-429ae1.svg)](https://github.com/InvoicePlane/InvoicePlane-Themes/issues)
+<!--
+[![Slack Chat](https://img.shields.io/badge/Development%3A-Slack%20Chat-429ae1.svg)](https://invoiceplane-slack.herokuapp.com/)
+-->
