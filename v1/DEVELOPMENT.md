@@ -9,26 +9,26 @@ Themes do not override the standard theme but replace it. Themes use Sass as the
 #### Theme structure
 
 All themes use the same structure. First, the variables are imported. They are used by Bootstrap, the core styles and third-party plugins like Select2.
-
+```scss
     @import "ip_variables";
     @import "variables";
-
+```
 After that all dependencies are imported. Bootstrap is imported by the core to make sure only needed components are loaded.
-
+```scss
     @import "../../core/scss/bootstrap";
     @import "../../core/scss/bootstrap-datepicker";
     @import "../../../node_modules/font-awesome/scss/font-awesome";
     @import "../../../node_modules/dropzone/dist/dropzone";
     @import "../../../node_modules/select2/src/scss/core";
-
+```
 Last but no least the InvoicePlane core styles are loaded.
-
+```scss
     @import "../../core/scss/core";
-
+```
 #### Warning!
 Do **not** change this structure and the imports, as missing styles may break the application completely! If you want to add any styles or override existing styles, add them **below the core import**. We will not support any broken themes that removed, replaced or changed any core files.
 
-If you think the core should be changed, join the development chat or create a new topic in the community forums.
+If you think the core should be changed, join the [development chat] or create a new topic in the [community forums].
 
 ---
 
@@ -67,8 +67,8 @@ The `theme_indentifier.theme` file is the main file of your theme and absolutely
 | AUTHOR            | Your name, pseudonym or company name                      | `InvoicePlane Developers`             |
 | AUTHOR_WEBSITE    | Your website, must start with http:// or https://         | `https://invoiceplane.com/`           |
 | LICENSE           | The license for the theme                                 | `MIT`                                 |
-| REQUIRES          | Minimum version of InvoicePlane required for this theme   | `1.5.0`                               |
-| TESTED_WITH       | Highest version of InvoicePlane the theme was tested with | `1.5.0`                               |
+| REQUIRES          | Minimum version of InvoicePlane required for this theme   | `1.6.3`                               |
+| TESTED_WITH       | Highest version of InvoicePlane the theme was tested with | `1.6.3`                               |
 
 The following information **must** be provided:
 
@@ -100,11 +100,13 @@ Contains the styles that are used for PDF templates.
 
 #### welcome.scss
 This is a smaller version of styles.scss that is used for the welcome screen and the setup
-> Note: InvoicePlane use only the default `InvoicePlane` theme when show setup ou welcome page. So there's no need to import/create it in your theme.
+
+_Note: InvoicePlane use only the `InvoicePlane_default` theme when show setup or welcome page. **So there's no need to import/create it in your theme**._
 
 #### `css` directory
 
 The `css` directory contains the compiled stylesheets. You don't and shoudln't change any files in this directory manually.
+> Note: Just run the `npm run build` (or `yarn build`) command in your terminal to create it.
 
 ---
 
@@ -112,17 +114,23 @@ The `css` directory contains the compiled stylesheets. You don't and shoudln't c
 
 Before you start to work on your theme please read these guidelines as violating them may lead to a rejection for the theme repository.
 
-* The theme identifier must not contain the string `invoiceplane` in any way. Only official themes like `invoiceplane_default` are allowed to use the string in its identifier. However, using `ip` is okay.
-* Choose your identifier wisely. It should not be a very generic string like `material` or `metro`. Add you name, pseudonym or company name to the string like this: `john_doe_material` or `companyname_ip_metro`.
+* The theme identifier must not contain the string `invoiceplane` in any way.
+Only official themes like `invoiceplane_default` are allowed to use the string in its identifier. However, using `ip` is okay.
+* Choose your identifier wisely. It should not be a very generic string like `material` or `metro`.
+Add you name, pseudonym or company name to the string like this: `john_doe_material` or `companyname_ip_metro`.
 * Make sure you provide detailed information about the theme and yourself in the .theme file.
 * Do not use any vendor prefixes like `-moz-border-radius` as they are _automatically added_ in the compilation process.
-* Please add at least 1 (one) screenshot of your theme with the name `screenshot.jpg` or `screenshot.png` to the theme root folder. The screenshot must show the dashboard. Feel free to add additional screenshots but please name them `screenshot_2.jpg`, `screenshot_3.jpg` and so on.
+* Please add at least 1 (one) screenshot of your theme with the name `screenshot.jpg` or `screenshot.png` to the theme root folder.
+The screenshot must show the dashboard. Feel free to add additional screenshots but please name them `screenshot_2.jpg`, `screenshot_3.jpg` and so on.
 
 ---
 
 ### Developing a new theme
 
-The development of a theme is done directly within the InvoicePlane application. Please clone the repository to your machine or download the package from our website. After that, run the command `npm install` in the root directory of the InvoicePlane app. This will install all needed components to build the theme.
+The development of a theme is done directly within the InvoicePlane application.
+Please clone the repository to your machine or download the package from our website.
+After that, run the command `npm install` in the root directory of the InvoicePlane app.
+This will install all needed components to build the theme.
 
 You may copy an existing theme (except the `core` folder) and modify it to match your needs. Starting from scratch is not recommended.
 
@@ -137,16 +145,20 @@ Grunt is the task runner used for the theme compilation. There are two tasks ava
 
 #### Publishing your theme
 
-We do recommend to add your theme to this theme repository. It will be and remain the main storage point for themes and may be integrated into the InvoicePlane website. To add your theme, read the corresponding section in the [main readme](/README.md).
+We do recommend to add your theme to this theme repository.
+It will be and remain the main storage point for themes and may be integrated into the InvoicePlane website.
+To add your theme, read the corresponding section in the [main readme](/README.md).
 
-After adding your theme to the repository, you may also promote it in the InvoicePlane community forums. We have a dedicated section for theme and template sharing.
+After adding your theme to the repository, you may also promote it in the InvoicePlane community forums.
+We have a dedicated section for theme and template sharing.
 
 ---
 
 ### Questions or need help?
 
-[![Community Forums](https://img.shields.io/badge/Help%3A-Community%20Forums-429ae1.svg)](https://community.invoiceplane.com/)
+[![Community Forums](https://img.shields.io/badge/Help%3A-Community%20Forums-429ae1.svg)][community forums]
 [![Issue Tracker](https://img.shields.io/badge/Development%3A-Issue%20Tracker-429ae1.svg)](https://github.com/InvoicePlane/InvoicePlane-Themes/issues)
-<!--
-[![Slack Chat](https://img.shields.io/badge/Development%3A-Slack%20Chat-429ae1.svg)](https://invoiceplane-slack.herokuapp.com/)
--->
+[![Development chat](https://img.shields.io/badge/Development%3A-Chat-429ae1.svg)][development chat]
+
+[community forums]: https://community.invoiceplane.com/
+[development chat]: https://discord.gg/PPzD2hTrXt

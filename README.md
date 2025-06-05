@@ -1,8 +1,21 @@
-![InvoicePlane](http://invoiceplane.com/content/logo/PNG/logo_300x150.png)
-#### _Themes_
+<img align="right" alt="InvoicePlane logo" src="https://github.com/InvoicePlane/InvoicePlane/blob/development/assets/core/img/favicon.png">
 
-InvoicePlane is a self-hosted open source application for managing your invoices, clients and payments.
+### _InvoicePlane Themes_
+
+<div align="center">
+
+_A libre self-hosted web application designed to help you manage invoices, clients, and payments efficiently._
+
 For more information visit __[InvoicePlane.com](https://invoiceplane.com)__ or try the __[demo](https://demo.invoiceplane.com)__.
+
+[![Contribute](https://img.shields.io/badge/How%20to%3A-Contribute-429ae1.svg)](CONTRIBUTING.md)
+[![Wiki](https://img.shields.io/badge/Help%3A-Official%20Wiki-429ae1.svg)](https://wiki.invoiceplane.com/)
+[![Community Forums](https://img.shields.io/badge/Help%3A-Community%20Forums-429ae1.svg)][community forums]
+[![Roadmap](https://img.shields.io/badge/Development%3A-Roadmap-429ae1.svg)](https://community.invoiceplane.com/c/announcements/20)
+[![Development chat](https://img.shields.io/badge/Development%3A-Chat-429ae1.svg)][development chat]
+[![Issue Tracker](https://img.shields.io/badge/Development%3A-Issue%20Tracker-429ae1.svg)](https://github.com/InvoicePlane/InvoicePlane-Themes/issues)
+
+</div>
 
 ---
 
@@ -27,33 +40,8 @@ Copy the folder of the theme you want to use into the `/assets` directory of you
 
 ---
 
-### Develop new Themes
-
-#### InvoicePlane 1
-
-See [v1/DEVELOPMENT.md](v1/DEVELOPMENT.md) for further instructions.
-
----
-
-### Submit a new Theme
-
-1. Make sure you followed the guidelines for developing a new InvoicePlane theme. They can be found in the development guides.
-2. Build your theme and commit the latest version of your themes' CSS. Themes without CSS files will be rejected.
-3. Submit a pull request that adds your theme to the repo. Make sure it is located in the correct folder and has a unique name.
-
----
-
-### Support / Development <!-- / Chat -->
-
-[![Wiki](https://img.shields.io/badge/Help%3A-Official%20Wiki-429ae1.svg)](https://wiki.invoiceplane.com/)
-[![Community Forums](https://img.shields.io/badge/Help%3A-Community%20Forums-429ae1.svg)](https://community.invoiceplane.com/)
-[![Issue Tracker](https://img.shields.io/badge/Development%3A-Issue%20Tracker-429ae1.svg)](https://github.com/InvoicePlane/InvoicePlane-Themes/issues)
-<!--
-[![Roadmap](https://img.shields.io/badge/Development%3A-Roadmap-429ae1.svg)](https://community.invoiceplane.com/t/topic/4390/1)
-[![Slack Chat](https://img.shields.io/badge/Development%3A-Slack%20Chat-429ae1.svg)](https://invoiceplane-slack.herokuapp.com/)
-[![Contribution Guide](https://img.shields.io/badge/Development%3A-Contribution%20Guide-429ae1.svg)](CONTRIBUTING.md)
--->
----
-
 > _The name 'InvoicePlane' and the InvoicePlane logo are both copyright by Kovah.de and InvoicePlane.com
-and their usage is restricted! For more information visit invoiceplane.com/license-copyright_
+and their usage is restricted! For more information visit https://invoiceplane.com/license-copyright_
+
+[community forums]: https://community.invoiceplane.com/c/templates/32
+[development chat]: https://discord.gg/PPzD2hTrXt
