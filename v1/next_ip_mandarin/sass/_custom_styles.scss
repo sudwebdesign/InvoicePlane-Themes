@@ -4,6 +4,10 @@
 |   =========================================================
 */
 
+::placeholder {
+  color: $gray-darker !important;
+}
+
 a:hover, a:active, a:focus {
   outline: 0;
   text-decoration: none;
@@ -48,14 +52,14 @@ body *:focus {
   color: $gray-light;
 }
 
-.btn-default:hover, 
+.btn-default:hover,
 .btn-default:focus {
   color: #fff;
 }
 
 .btn-success {
   background-image: linear-gradient(#58a959, #488649 100%, #58a959);
-}  
+}
 
 .btn-success:hover {
   background-image: linear-gradient(#2f7d2f, #379337, #2f7d2f);
@@ -67,15 +71,15 @@ body *:focus {
 }
 
 .label.draft {
-  background-color: #8a8a8a; 
+  background-color: #8a8a8a;
 }
 
 .label.rejected {
-  background-color: #ee5f5b; // #b73d3d; 
+  background-color: #ee5f5b; // #b73d3d;
 }
 
 .label.canceled {
-  background-color: #3e444c; 
+  background-color: #3e444c;
 }
 
 .canceled {
@@ -85,7 +89,7 @@ body *:focus {
 .sidebar li a:hover {
   color: #fff;
   background-color: #000;
-} 
+}
 
 .form-control {
   background-color: $gray;
@@ -107,9 +111,9 @@ body *:focus {
   border-radius: 0;
 }
 
-.datepicker .prev:hover, 
-.datepicker .datepicker-switch:hover, 
-.datepicker .next:hover, 
+.datepicker .prev:hover,
+.datepicker .datepicker-switch:hover,
+.datepicker .next:hover,
 .datepicker thead tr th.dow:hover,
 .datepicker table tr td.day:hover,
 .datepicker table tr td span.month:hover,
@@ -124,9 +128,9 @@ select option {
 }
 
 @media screen and (min-width: 992px) {
-  
+
   #main-area > .sidebar {
-    display: none !important; 
+    display: none !important;
   }
 
   .container-fluid {
@@ -138,19 +142,19 @@ select option {
     margin-right: 0;
     margin-left: 0;
   }
-  
+
   #main-area {
-    display: block !important; 
+    display: block !important;
   }
-  
+
   #main-content {
     width: 100%;
     padding-left: 199px; // + border-left: 1px = 200px;
   }
 
   .hidden-md {
-    display: inline-block !important;  
-  } 
+    display: inline-block !important;
+  }
 
   .visible-xs {
     display: contents !important;
@@ -159,8 +163,8 @@ select option {
   .visible-md-inline,
   .visible-md-inline-block {
     display: none !important;
-  }   
-  
+  }
+
   .navbar {
     position: fixed;
     float: none;
@@ -178,7 +182,7 @@ select option {
   .navbar-right .dropdown-menu {
     right: auto;
     left: 0;
-  }  
+  }
 
   .navbar-nav > ul {
     margin: 0;
@@ -197,7 +201,7 @@ select option {
 
   .navbar-nav > li > .dropdown-menu {
     border-top-left-radius: 4px;
-    border-top-right-radius: 4px; 
+    border-top-right-radius: 4px;
   }
 
   .navbar-nav {

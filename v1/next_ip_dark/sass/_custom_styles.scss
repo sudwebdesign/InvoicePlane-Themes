@@ -4,6 +4,10 @@
 |   =========================================================
 */
 
+::placeholder {
+  color: $gray-darker !important;
+}
+
 a:hover, a:active, a:focus {
   outline: 0;
   text-decoration: none;

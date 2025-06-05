@@ -68,7 +68,7 @@
 }
 
 .btn-default {
-  
+
   @include btn-shadow($btn-default-bg);
 
   &:hover {
